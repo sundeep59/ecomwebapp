@@ -1,0 +1,135 @@
+<!doctype html>
+<html ng-app="testApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/testCtrl.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div ng-controller="TestCtrl" class="container">
+    <div>
+        <div id="fixedheader">Try Prime Membership Today
+            <span class="header">Join Now</span>
+        </div>
+        <div class="mainlogo"><img src="images/logo-BAC-Store.jpg"></div>
+        <div>
+            <ul id="menu">
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">BUSINESS</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li>
+					<span>
+						<img src="images/search-icon-copy-19.png">
+						<input type="text" class="search" placeholder="Search">
+					</span>
+				</li>
+                <li><a href="#">TRACK ORDER</a></li>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#"><img src="images/stroke-3-copy-27.png">0</a></li>
+            </ul>
+        </div>
+    </div>
+    <h1 class="mainheading">Wearable Technoolgy</h1>
+    <div class="refine">
+        <span><h2>Refine</h2></span>
+        <a href="#">Clear All Sections</a>
+
+        <h3>Departments</h3>
+
+        <div class="refineData" data-ng-repeat="r in refineDataDept">
+            <span>{{r.name}}</span>&nbsp;(<span>{{r.count}}</span>)
+        </div>
+        <hr>
+        <h3>Brand</h3>
+        <div data-ng-repeat="r in refineDataBrand">
+            <span><input type="checkbox">{{r.name}}</span>&nbsp;(<span>{{r.count}}</span>)
+        </div>
+    </div>
+    <div class="details">
+        <div class="tile" data-ng-repeat="r in productData">
+            <div ng-init="r.topRated==true">
+                <span class="toprate" ng-if="r.topRated">top rated</span>
+            </div>
+            <div><img src="{{r.image}}" class="img"></div>
+            <div class="desc">{{r.description}}</div>
+            <br>
+
+            <div ng-init="r.freeShipping==true">
+                <span class="ship" ng-if="r.freeShipping">Free Shipping</span><br>
+            </div>
+            <div>
+                <span ng-if="r.outOfStock==false">
+                    <strike class="price"><span>${{r.price}}</span></strike>
+                </span>
+            </div>
+            <div>
+                <span ng-if="r.outOfStock==false">
+                <span class="offprice"><sup>$</sup>{{r.offerPrice}}<sup>00</sup></span>
+                    </span>
+            </div>
+            <div class="ofs" ng-init="r.outOfStock==true">
+                <span class="ofs" ng-if="r.outOfStock">Out of Stock</span>
+                <span ng-if="r.outOfStock==false">
+                    <button class="buy">Buy</button></span>
+            </div>
+        </div>
+    </div>
+    <div class="trend">
+        <h1 class="mainheading">Buying Trend</h1>
+        <div class="chartArea">
+            <div class="chart">
+                <div class="insideArea">
+                    <div class="bars" data-ng-repeat="r in trendData">
+                        <div>{{r.description}}({{r.trendValue}})</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="textArea">
+            <div class="insideTextArea">
+                <div>
+                    <h2>4 days - 98 left</h2>
+                </div>
+                <span>Kitchen Aid Classic 4.5-Qt Stand Mixer</span>
+                <h1><sup>$</sup>199<sup>98</sup></h1>
+                <strike>$XX,XX,XXX</strike>
+                <div class="free">FREE SHIPPING</div>
+                <div>
+                    <h4>Why we love it</h4>
+                    <p>The Professional Stand Mixer is perfect for heavy, dense mixtures. Mix, knead and whip
+                        ingredients into culinary master pieces.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixedfooter">
+        <div>
+            <span class="footertextleft">Get More out of your membership</span>
+            <span class="footertextright">Subscribe to our news letter</span>
+        </div>
+        <span class="footersubtextleft">Subscribe to save with daily shocking values, club updates and more!</span>
+        <span class="footersubtextright"><input type="text" placeholder="email address"><button>Subscribe
+        </button></span>
+        <hr class="footerrow">
+        <div class="footerbtm">
+            <ul class="a">
+                <li>Membership</li>
+                <li>Shipping & Delivery</li>
+                <li>Help</li>
+                <li>Resources</li>
+            </ul>
+        </div>
+        <div class="footerbtm">
+            <ul id="menu1">
+                <li>Site Directory</li>
+                <li>Privacy Policy</li>
+                <li>Help</li>
+                <li>Resources</li>
+                <li><img src="images/socialmedia.png"></li>
+            </ul>
+        </div>
+        <div class="copyright">&copy; 2000-2015, ABC, Inc. All rights reserved.</div>
+    </div>
+</div>
+</body>
+</html>

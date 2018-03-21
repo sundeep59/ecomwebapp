@@ -1,0 +1,20 @@
+{
+    "trendAnalysis": [
+		{
+			"description": "Moto 360",
+			"trendValue": 20
+		},
+		{
+			"description": "iWatch",
+			"trendValue": 30
+		},
+		{
+			"description": "Samsung",
+			"trendValue": 10
+		},
+		{
+			"description": "LG",
+			"trendValue": 5
+		}
+	]
+}

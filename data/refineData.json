@@ -1,0 +1,60 @@
+{
+    "Refine": {
+        "Departments": [
+            {
+                "name": "Fitness Watches Monitors",
+                "count": 20
+            },
+            {
+                "name": "Cell Phone Watches",
+                "count": 12
+            },
+            {
+                "name": "Elliptical Machines",
+                "count": 15
+            },
+            {
+                "name": "Treadmills",
+                "count": 5
+            },
+            {
+                "name": "Exercise Bikes",
+                "count": 3
+            },
+            {
+                "name": "Weight Scales",
+                "count": 2
+            },
+            {
+                "name": "iPod MP3 Accessories",
+                "count": 25
+            }
+        ],
+        "Brand": [
+            {
+                "name": "FitBit",
+                "count": 2
+            },
+            {
+                "name": "ProForm",
+                "count": 3
+            },
+            {
+                "name": "iFit",
+                "count": 3
+            },
+            {
+                "name": "MAGELLAN",
+                "count": 3
+            },
+            {
+                "name": "Pebble",
+                "count": 3
+            },
+            {
+                "name": "Apple",
+                "count": 3
+            }
+        ]
+    }
+}
