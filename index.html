@@ -50,7 +50,9 @@
             <div ng-init="r.topRated==true">
                 <span class="toprate" ng-if="r.topRated">top rated</span>
             </div>
-            <div><img src="{{r.image}}" class="img"></div>
+            <div>
+                <img src={{r.image}} class="img" alt="img" />
+            </div>
             <div class="desc">{{r.description}}</div>
             <br>
 
